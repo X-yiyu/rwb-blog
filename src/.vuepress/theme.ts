@@ -3,11 +3,11 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://x-yiyu.github.io/",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mrhope.site",
+    name: "x-yiyu",
+    url: "https://x-yiyu.github.io/"
   },
 
   iconAssets: "iconfont",
@@ -18,21 +18,25 @@ export default hopeTheme({
 
   docsDir: "demo/theme-docs/src",
 
+  fullscreen: true,
+
+  backToTop: true,
+
   locales: {
     "/": {
       // navbar
-      navbar: enNavbar,
+      navbar: zhNavbar,
 
       // sidebar
-      sidebar: enSidebar,
+      sidebar: zhSidebar,
 
-      footer: "Default footer",
+      footer: "默认页脚",
 
       displayFooter: true,
 
       metaLocales: {
-        editLink: "Edit this page on GitHub",
-      },
+        editLink: "在 GitHub 上编辑此页"
+      }
     },
 
     /**
@@ -51,24 +55,27 @@ export default hopeTheme({
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
-      },
-    },
+        editLink: "在 GitHub 上编辑此页"
+      }
+    }
   },
 
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
-    },
+      "/zh/demo/encrypt.html": ["1234"]
+    }
   },
 
   plugins: {
-    comment: {
-      // @ts-expect-error: You should generate and use your own comment service
-      provider: "Waline",
-    },
+    // comment: {
+    //   // @ts-expect-error: You should generate and use your own comment service
+    //   provider: "Waline"
+    // },
 
+    blog: {
+      excerptLength: 0
+    },
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
@@ -88,10 +95,10 @@ export default hopeTheme({
       mark: true,
       mermaid: true,
       playground: {
-        presets: ["ts", "vue"],
+        presets: ["ts", "vue"]
       },
       presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
+        plugins: ["highlight", "math", "search", "notes", "zoom"]
       },
       stylize: [
         {
@@ -101,17 +108,17 @@ export default hopeTheme({
               return {
                 tag: "Badge",
                 attrs: { type: "tip" },
-                content: "Recommended",
+                content: "Recommended"
               };
-          },
-        },
+          }
+        }
       ],
       sub: true,
       sup: true,
       tabs: true,
       vPre: true,
-      vuePlayground: true,
-    },
+      vuePlayground: true
+    }
 
     // uncomment these if you want a pwa
     // pwa: {
@@ -169,5 +176,5 @@ export default hopeTheme({
     //     ],
     //   },
     // },
-  },
+  }
 });

@@ -10,7 +10,7 @@ export default hopeTheme({
     url: "https://x-yiyu.github.io/"
   },
 
-  iconAssets: "iconfont",
+  iconAssets: "iconify",
 
   logo: "/logo.svg",
 
@@ -67,15 +67,20 @@ export default hopeTheme({
     }
   },
 
+  blog: {
+    name: "博",
+    description: "人类海洋中的一滴水",
+    roundAvatar: true,
+    excerptLength: 0
+  },
+
   plugins: {
     // comment: {
     //   // @ts-expect-error: You should generate and use your own comment service
     //   provider: "Waline"
     // },
 
-    blog: {
-      excerptLength: 0
-    },
+    blog: true,
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,

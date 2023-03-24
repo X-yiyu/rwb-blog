@@ -4,9 +4,9 @@ icon: home
 layout: BlogHome
 title: 主页
 heroImage: /logo.svg
-heroText: x-yiyu
+heroText: 欢迎
 heroFullScreen: true
-tagline: 一个随和的博客
+tagline: 这是一个随和的博客
 copyright: false
 footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a>
 projects:
@@ -22,7 +22,7 @@ projects:
 
   - name: 参与开源
     desc: 参与开源，奉献学习
-    link: https://waline.js.org/
+    link: /doc/
     icon: /assets/img/cat.jpg
 ---
 
